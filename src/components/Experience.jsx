@@ -61,10 +61,16 @@ export default function Experience() {
                       </h3>
                       
                       <div className="flex items-center gap-2 text-sm text-slate-300 font-medium mb-4">
-                        <Building className="w-4 h-4 text-cyan-400" />
-                        <span>{item.company}</span>
+                        <Building className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                        {item.companyUrl ? (
+                          <a href={item.companyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 hover:underline transition-colors">
+                            {item.company}
+                          </a>
+                        ) : (
+                          <span>{item.company}</span>
+                        )}
                         <span className="text-slate-600">•</span>
-                        <MapPin className="w-3.5 h-3.5 text-slate-400" />
+                        <MapPin className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
                         <span className="text-xs text-slate-400">{item.location}</span>
                       </div>
 

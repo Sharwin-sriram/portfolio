@@ -56,7 +56,7 @@ export default function About() {
             </p>
 
             <p className="text-slate-400 leading-relaxed">
-              During my internship at <strong className="text-teal-300">Pinesphere Technologies</strong>, I led the development of key components for enterprise Point-of-Sale systems, mastering real-time state synchronization and production-grade UI design.
+              During my internship at <a href="https://www.pinesphere.com/" target="_blank" rel="noopener noreferrer" className="text-teal-300 font-bold hover:underline">Pinesphere Solutions</a>, I led the development of key components for enterprise Point-of-Sale systems, mastering real-time state synchronization and production-grade UI design.
             </p>
 
             <div className="p-4 rounded-2xl glass-card border-l-4 border-l-teal-400 bg-slate-900/40">

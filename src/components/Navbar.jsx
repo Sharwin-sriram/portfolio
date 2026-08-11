@@ -106,12 +106,12 @@ export default function Navbar({ activeSection, setActiveSection }) {
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
-            <a
+            {/* <a
               href="#contact"
               className="px-4 py-1.5 text-xs font-semibold text-teal-950 bg-teal-400 hover:bg-teal-300 rounded-full transition-all shadow-md hover:shadow-teal-400/20"
             >
               Get In Touch
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile Menu Toggle Button */}
@@ -160,13 +160,13 @@ export default function Navbar({ activeSection, setActiveSection }) {
                   <LinkedinIcon className="w-5 h-5" />
                 </a>
               </div>
-              <a
+              {/* <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-2 text-xs font-medium text-teal-950 bg-teal-400 hover:bg-teal-300 rounded-full"
               >
                 Contact Me
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

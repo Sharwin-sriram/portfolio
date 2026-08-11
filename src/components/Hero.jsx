@@ -1,13 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { ArrowRight, MapPin, Code, Cpu } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { GithubIcon } from "./Icons";
+import Image from "next/image";
 
 export default function Hero() {
-  const [imageError, setImageError] = useState(false);
-
   return (
     <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Background Decorative Radial Glows */}
@@ -87,20 +85,16 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Side: Profile Image / Alt Message */}
+          {/* Right Side: Profile Image */}
           <div className="flex items-center justify-center">
-            {!imageError ? (
-              <img
-                src={profileData.avatarUrl || "/profile.jpg"}
-                alt="Profile Picture Placeholder"
-                onError={() => setImageError(true)}
-                className="max-w-xs w-full rounded-2xl border border-slate-800 shadow-lg object-cover"
-              />
-            ) : (
-              <div className="px-8 py-12 rounded-2xl border border-dashed border-slate-800 bg-slate-900/30 text-slate-400 text-center text-sm">
-                Profile Picture Placeholder
-              </div>
-            )}
+            <Image
+              src="/photo.png"
+              alt="Profile Picture"
+              width={1077}
+              height={1461}
+              unoptimized
+              className="max-w-xs w-full h-auto rounded-2xl border border-slate-800 shadow-lg object-cover"
+            />
           </div>
 
         </div>
