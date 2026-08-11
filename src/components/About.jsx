@@ -17,8 +17,8 @@ export default function About() {
     },
     {
       icon: Layers,
-      title: "System Customization",
-      description: "Hands-on experience configuring Linux environments (Hyprland rice), build tooling, and media streaming protocols."
+      title: "API & Backend Systems",
+      description: "Building scalable REST APIs and server-side services with Node.js, Express, and Spring Boot for reliable data pipelines."
     },
     {
       icon: Zap,

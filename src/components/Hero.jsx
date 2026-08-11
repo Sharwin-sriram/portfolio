@@ -70,7 +70,7 @@ export default function Hero() {
             </div>
 
             {/* Location & Quick Meta */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400 pt-4">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-slate-400 pt-4">
               <div className="flex items-center gap-1.5">
                 <MapPin className="w-4 h-4 text-teal-400" />
                 <span>{profileData.location}</span>

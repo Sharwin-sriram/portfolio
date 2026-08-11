@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Code2, Layout, Server, Wrench, CheckCircle2 } from "lucide-react";
+import { Code2, Layout, Server, Wrench } from "lucide-react";
 import { skillsData } from "@/data/skills";
 
 const iconMap = {
@@ -23,7 +23,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 relative bg-slate-950/40 border-y border-slate-800/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs mb-3">
@@ -64,6 +64,7 @@ export default function Skills() {
                 key={idx}
                 className="glass-card p-6 rounded-2xl border border-slate-800 hover:border-teal-500/30 transition-all"
               >
+                {/* Card Header */}
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
                   <div className="p-2.5 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/20">
                     <Icon className="w-5 h-5" />
@@ -71,22 +72,22 @@ export default function Skills() {
                   <h3 className="text-lg font-bold text-white">{cat.category}</h3>
                 </div>
 
-                <div className="space-y-4">
+                {/* Skill Chips */}
+                <div className="flex flex-wrap gap-3">
                   {cat.skills.map((skill, sIdx) => (
-                    <div key={sIdx} className="space-y-1.5">
-                      <div className="flex justify-between items-center text-xs">
-                        <span className="font-semibold text-slate-200 flex items-center gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-teal-400" />
-                          {skill.name}
-                        </span>
-                        <span className="text-slate-400">{skill.level}%</span>
-                      </div>
-                      <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                        <div
-                          className="h-full bg-gradient-to-r from-teal-500 to-cyan-400 rounded-full transition-all duration-1000"
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
+                    <div
+                      key={sIdx}
+                      className="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-900/70 border border-slate-800 hover:border-teal-500/40 hover:bg-slate-900 transition-all group"
+                    >
+                      <img
+                        src={skill.icon}
+                        alt={skill.name}
+                        className="w-4 h-4 object-contain flex-shrink-0"
+                        onError={(e) => { e.target.style.display = "none"; }}
+                      />
+                      <span className="text-xs font-medium text-slate-300 group-hover:text-slate-100 transition-colors whitespace-nowrap">
+                        {skill.name}
+                      </span>
                     </div>
                   ))}
                 </div>

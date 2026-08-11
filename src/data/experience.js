@@ -16,7 +16,7 @@ export const experienceData = [
   },
   {
     role: "Software Engineering Project Lead",
-    company: "Academic & Open Source Projects",
+    company: "Pinesphere Technologies",
     period: "2025 - Present",
     type: "Projects",
     location: "India",
@@ -24,8 +24,8 @@ export const experienceData = [
     highlights: [
       "Built an Internship Management Portal to streamline application tracking, evaluation workflows, and candidate review.",
       "Architected a custom Media Server handling efficient content streaming and server-side processing.",
-      "Implemented Low-Level Design (LLD) pattern solutions in Java covering classic design patterns and system design paradigms."
+      "Designed and developed an interactive Screensaver application featuring dynamic animations and customizable visual effects."
     ],
-    tech: ["Java", "TypeScript", "Next.js", "Express", "Linux", "Design Patterns"]
+    tech: ["TypeScript", "Next.js", "Express", "Git", "Trello", "Design Patterns"]
   }
 ];

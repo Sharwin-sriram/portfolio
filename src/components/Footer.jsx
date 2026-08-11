@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, Terminal, Heart } from "lucide-react";
+import { ArrowUp, Heart } from "lucide-react";
 import { profileData } from "@/data/profile";
 
 export default function Footer() {
@@ -14,12 +14,9 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           
           {/* Brand */}
-          <div className="flex items-center gap-2 text-slate-300 font-bold">
-            <div className="p-1.5 rounded-lg bg-teal-500/10 border border-teal-500/30 text-teal-400">
-              <Terminal className="w-4 h-4" />
-            </div>
-            <span>
-              Sharwin<span className="text-teal-400">.dev</span>
+          <div className="text-slate-300">
+            <span className="font-anurati text-lg">
+              Sharwin
             </span>
           </div>
 

@@ -9,12 +9,27 @@
   body {
     background-color: #080c14;
     color: #f1f5f9;
-    font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    /* Roboto as the primary body/UI font */
+    font-family: "Roboto", system-ui, -apple-system, sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
     overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    /* Google Sans for all headings */
+    font-family: "Google Sans", system-ui, sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "GRAD" 0;
   }
 }
 
 /* Custom Utilities & Glassmorphism */
+.font-anurati {
+  font-family: "Anurati", sans-serif;
+  letter-spacing: 0.05em;
+}
+
 .glass-panel {
   background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(16px);

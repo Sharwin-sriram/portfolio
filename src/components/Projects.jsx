@@ -26,7 +26,10 @@ export default function Projects() {
 
   const languages = ["All", ...Array.from(new Set(repos.map((r) => r.language).filter(Boolean)))];
 
+  const HIDDEN_REPOS = ["NWscript", "nilesoft-shell"];
+
   const filteredRepos = repos.filter((repo) => {
+    if (HIDDEN_REPOS.some(name => repo.name.toLowerCase() === name.toLowerCase())) return false;
     const matchesSearch = repo.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (repo.description && repo.description.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesLang = selectedLanguage === "All" || repo.language === selectedLanguage;

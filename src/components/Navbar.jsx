@@ -15,31 +15,34 @@ export default function Navbar({ activeSection, setActiveSection }) {
     { name: "Projects", href: "#projects" },
     { name: "Certifications", href: "#certifications" },
     { name: "Education", href: "#education" },
-    { name: "Contact", href: "#contact" }
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-
-      const sections = navLinks.map(link => link.href.substring(1));
-      const scrollPosition = window.scrollY + 200;
-
-      for (const sectionId of sections) {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(sectionId);
-            break;
-          }
-        }
-      }
-    };
-
+    // Navbar background on scroll
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    // IntersectionObserver for reliable active section tracking
+    const sectionIds = navLinks.map(link => link.href.substring(1));
+    const observers = [];
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observers.forEach(obs => obs.disconnect());
+    };
   }, []);
 
   return (
@@ -55,13 +58,10 @@ export default function Navbar({ activeSection, setActiveSection }) {
           {/* Logo / Brand */}
           <a
             href="#hero"
-            className="flex items-center gap-2 group text-white text-lg font-bold tracking-wider"
+            className="flex items-center group"
           >
-            <div className="p-2 rounded-lg bg-teal-500/10 border border-teal-500/30 text-teal-400 group-hover:bg-teal-500/20 group-hover:border-teal-400 transition-all">
-              <Terminal className="w-5 h-5" />
-            </div>
-            <span>
-              Sharwin<span className="text-teal-400">.dev</span>
+            <span className="font-anurati text-xl text-white group-hover:text-teal-300 transition-colors">
+              Sharwin
             </span>
           </a>
 
