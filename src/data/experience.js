@@ -1,7 +1,8 @@
 export const experienceData = [
   {
     role: "Full-Stack Developer Intern",
-    company: "Pinesphere Technologies",
+    company: "Pinesphere Solutions",
+    companyUrl: "https://www.pinesphere.com/",
     period: "May 2026 - Present",
     type: "Internship",
     location: "India",
@@ -16,7 +17,8 @@ export const experienceData = [
   },
   {
     role: "Software Engineering Project Lead",
-    company: "Pinesphere Technologies",
+    company: "Pinesphere Solutions",
+    companyUrl: "https://www.pinesphere.com/",
     period: "2025 - Present",
     type: "Projects",
     location: "India",

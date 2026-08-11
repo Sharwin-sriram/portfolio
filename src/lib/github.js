@@ -49,15 +49,15 @@ export const fallbackRepos = [
     updated_at: "2026-08-11T04:22:38Z"
   },
   {
-    id: 1296046484,
-    name: "LLD",
-    html_url: "https://github.com/Sharwin-sriram/LLD",
-    description: "Low Level System Design and Design Pattern catalog in Java.",
-    language: "Java",
+    id: 1039067263,
+    name: "ScreenSaver",
+    html_url: "https://github.com/Sharwin-sriram/ScreenSaver",
+    description: "An interactive Screensaver application featuring dynamic animations.",
+    language: "Python",
     stargazers_count: 0,
     forks_count: 0,
-    topics: ["java", "lld", "design-patterns", "solid-principles"],
-    updated_at: "2026-07-10T04:28:34Z"
+    topics: ["python", "graphics", "animations"],
+    updated_at: "2025-12-06T08:21:03Z"
   },
   {
     id: 1266968312,

@@ -54,21 +54,21 @@ export const featuredProjectsData = [
     ]
   },
   {
-    id: "lld-patterns",
-    title: "Low-Level System Design (LLD)",
-    subtitle: "Object-Oriented Design & Design Pattern Catalog",
-    description: "A curated repository of Low-Level Design implementations in Java, solving real-world object-oriented design problems.",
-    longDescription: "Includes clean implementations of Creational, Structural, and Behavioral design patterns along with standard LLD interview problems like Parking Lot, Elevator System, and Vending Machine.",
-    tags: ["Java", "Object-Oriented Design", "LLD", "Design Patterns", "Clean Code"],
-    githubUrl: "https://github.com/Sharwin-sriram/LLD",
+    id: "screensaver",
+    title: "ScreenSaver",
+    subtitle: "Dynamic screensaver",
+    description: "An Screensaver application featuring dynamic animations and customizable visual effects.",
+    longDescription: "Designed and developed a customizable screensaver application in Python that provides smooth dynamic animations and visual effects for idle screens.",
+    tags: ["Python", "Animations", "Graphics", "UI"],
+    githubUrl: "https://github.com/Sharwin-sriram/ScreenSaver",
     liveUrl: null,
-    badge: "Systems Architecture",
+    badge: "UI",
     stars: 0,
     forks: 0,
     highlights: [
-      "SOLID principles demonstration in Java",
-      "UML diagram mappings for complex class relationships",
-      "Extensible code modularity for quick adaptation"
+      "Dynamic procedural animations and visual effects",
+      "Customizable configurations for different idle states",
+      "Optimized rendering loop for low CPU/GPU usage"
     ]
   }
 ];
