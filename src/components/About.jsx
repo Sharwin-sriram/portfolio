@@ -33,7 +33,7 @@ export default function About() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs font-mono mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs mb-3">
             <User className="w-3.5 h-3.5" />
             <span>ABOUT ME</span>
           </div>
@@ -60,7 +60,7 @@ export default function About() {
             </p>
 
             <div className="p-4 rounded-2xl glass-card border-l-4 border-l-teal-400 bg-slate-900/40">
-              <p className="text-xs sm:text-sm font-mono text-teal-200">
+              <p className="text-xs sm:text-sm text-teal-200">
                 "Simple things should be simple, complex things should be possible." — Designing software with clarity and modular structure.
               </p>
             </div>

@@ -1,10 +1,13 @@
 "use client";
 
-import { ArrowRight, Mail, FileText, Sparkles, MapPin, Code, Cpu } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, MapPin, Code, Cpu } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { GithubIcon } from "./Icons";
 
 export default function Hero() {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Background Decorative Radial Glows */}
@@ -18,7 +21,7 @@ export default function Hero() {
           <div className="flex-1 text-center lg:text-left space-y-6">
             
             {/* Status Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 text-xs font-mono tracking-wide">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 text-xs tracking-wide">
               <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
               <span>Full-Stack & LLD Software Engineer</span>
             </div>
@@ -67,7 +70,7 @@ export default function Hero() {
             </div>
 
             {/* Location & Quick Meta */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400 pt-4 font-mono">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400 pt-4">
               <div className="flex items-center gap-1.5">
                 <MapPin className="w-4 h-4 text-teal-400" />
                 <span>{profileData.location}</span>
@@ -84,32 +87,20 @@ export default function Hero() {
 
           </div>
 
-          {/* Avatar / Visual Card */}
-          <div className="relative group">
-            {/* Glowing Ring */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500" />
-            
-            <div className="relative glass-card p-6 sm:p-8 rounded-3xl border border-slate-700/80 max-w-sm text-center">
-              <div className="relative w-36 h-36 mx-auto mb-5 rounded-2xl overflow-hidden border-2 border-teal-400/40 p-1 bg-slate-900 shadow-2xl">
-                <img
-                  src={profileData.avatarUrl}
-                  alt={profileData.name}
-                  className="w-full h-full object-cover rounded-xl"
-                />
+          {/* Right Side: Profile Image / Alt Message */}
+          <div className="flex items-center justify-center">
+            {!imageError ? (
+              <img
+                src={profileData.avatarUrl || "/profile.jpg"}
+                alt="Profile Picture Placeholder"
+                onError={() => setImageError(true)}
+                className="max-w-xs w-full rounded-2xl border border-slate-800 shadow-lg object-cover"
+              />
+            ) : (
+              <div className="px-8 py-12 rounded-2xl border border-dashed border-slate-800 bg-slate-900/30 text-slate-400 text-center text-sm">
+                Profile Picture Placeholder
               </div>
-
-              <h3 className="text-xl font-bold text-white mb-1">{profileData.name}</h3>
-              <p className="text-xs text-teal-400 font-mono mb-4">@Sharwin-sriram</p>
-
-              <div className="grid grid-cols-2 gap-3 pt-2 text-left border-t border-slate-800">
-                {profileData.stats.map((stat, idx) => (
-                  <div key={idx} className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/60">
-                    <div className="text-xs text-slate-400">{stat.label}</div>
-                    <div className="text-xs sm:text-sm font-semibold text-slate-200 font-mono mt-0.5">{stat.value}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            )}
           </div>
 
         </div>

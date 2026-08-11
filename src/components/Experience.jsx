@@ -10,7 +10,7 @@ export default function Experience() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs font-mono mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs mb-3">
             <Briefcase className="w-3.5 h-3.5" />
             <span>WORK & INTERNSHIPS</span>
           </div>
@@ -47,10 +47,10 @@ export default function Experience() {
                       
                       {/* Company & Role Header */}
                       <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                        <span className="px-2.5 py-0.5 rounded-md bg-teal-500/10 text-teal-300 text-xs font-mono border border-teal-500/30">
+                        <span className="px-2.5 py-0.5 rounded-md bg-teal-500/10 text-teal-300 text-xs border border-teal-500/30">
                           {item.type}
                         </span>
-                        <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400">
+                        <div className="flex items-center gap-1.5 text-xs text-slate-400">
                           <Calendar className="w-3.5 h-3.5 text-teal-400" />
                           <span>{item.period}</span>
                         </div>
@@ -87,7 +87,7 @@ export default function Experience() {
                         {item.tech.map((t, tIdx) => (
                           <span
                             key={tIdx}
-                            className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800 text-[11px] font-mono text-slate-300"
+                            className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800 text-[11px] text-slate-300"
                           >
                             {t}
                           </span>

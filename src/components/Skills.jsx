@@ -26,7 +26,7 @@ export default function Skills() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs mb-3">
             <Code2 className="w-3.5 h-3.5" />
             <span>TECHNICAL SKILLS</span>
           </div>
@@ -79,7 +79,7 @@ export default function Skills() {
                           <CheckCircle2 className="w-3.5 h-3.5 text-teal-400" />
                           {skill.name}
                         </span>
-                        <span className="font-mono text-slate-400">{skill.level}%</span>
+                        <span className="text-slate-400">{skill.level}%</span>
                       </div>
                       <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
                         <div

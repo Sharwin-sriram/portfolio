@@ -10,7 +10,7 @@ export default function Education() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs mb-3">
             <GraduationCap className="w-3.5 h-3.5" />
             <span>ACADEMIC BACKGROUND</span>
           </div>
@@ -29,7 +29,7 @@ export default function Education() {
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
                 <div>
-                  <span className="px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 text-xs font-mono mb-2 inline-block">
+                  <span className="px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 text-xs mb-2 inline-block">
                     {edu.score}
                   </span>
                   <h3 className="text-2xl font-bold text-white leading-snug">
@@ -40,7 +40,7 @@ export default function Education() {
                   </p>
                 </div>
 
-                <div className="flex flex-col md:items-end text-xs font-mono text-slate-400 gap-1">
+                <div className="flex flex-col md:items-end text-xs text-slate-400 gap-1">
                   <div className="flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5 text-teal-400" />
                     <span>{edu.period}</span>
@@ -54,7 +54,7 @@ export default function Education() {
 
               {/* Coursework Grid */}
               <div className="pt-6">
-                <h4 className="text-xs font-mono uppercase text-slate-400 tracking-wider mb-4 flex items-center gap-2">
+                <h4 className="text-xs uppercase text-slate-400 tracking-wider mb-4 flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-teal-400" />
                   <span>Key Computer Science Coursework</span>
                 </h4>

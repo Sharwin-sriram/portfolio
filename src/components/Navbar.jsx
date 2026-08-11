@@ -55,7 +55,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
           {/* Logo / Brand */}
           <a
             href="#hero"
-            className="flex items-center gap-2 group text-white font-mono text-lg font-bold tracking-wider"
+            className="flex items-center gap-2 group text-white text-lg font-bold tracking-wider"
           >
             <div className="p-2 rounded-lg bg-teal-500/10 border border-teal-500/30 text-teal-400 group-hover:bg-teal-500/20 group-hover:border-teal-400 transition-all">
               <Terminal className="w-5 h-5" />

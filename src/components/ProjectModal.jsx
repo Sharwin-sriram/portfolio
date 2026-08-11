@@ -23,26 +23,26 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* Modal Header */}
         <div className="pr-10 mb-4">
-          <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 text-xs font-mono mb-2">
+          <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 text-xs mb-2">
             {project.badge || "Featured Project"}
           </span>
           <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
             {project.title}
           </h3>
-          <p className="text-sm font-mono text-teal-400 mt-1">{project.subtitle}</p>
+          <p className="text-sm text-teal-400 mt-1">{project.subtitle}</p>
         </div>
 
         {/* Scrollable Content Body */}
         <div className="overflow-y-auto pr-2 space-y-6 flex-1 text-slate-300">
           <div>
-            <h4 className="text-xs font-mono uppercase text-slate-400 tracking-wider mb-2">Overview</h4>
+            <h4 className="text-xs uppercase text-slate-400 tracking-wider mb-2">Overview</h4>
             <p className="text-sm leading-relaxed text-slate-300">{project.longDescription || project.description}</p>
           </div>
 
           {/* Highlights */}
           {project.highlights && project.highlights.length > 0 && (
             <div>
-              <h4 className="text-xs font-mono uppercase text-slate-400 tracking-wider mb-3">Key Technical Features</h4>
+              <h4 className="text-xs uppercase text-slate-400 tracking-wider mb-3">Key Technical Features</h4>
               <ul className="space-y-2">
                 {project.highlights.map((h, i) => (
                   <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
@@ -56,12 +56,12 @@ export default function ProjectModal({ project, onClose }) {
 
           {/* Tech Stack */}
           <div>
-            <h4 className="text-xs font-mono uppercase text-slate-400 tracking-wider mb-3">Tech Stack</h4>
+            <h4 className="text-xs uppercase text-slate-400 tracking-wider mb-3">Tech Stack</h4>
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300"
+                  className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300"
                 >
                   #{tag}
                 </span>

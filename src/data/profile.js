@@ -2,7 +2,7 @@ export const profileData = {
   name: "Sharwin Sriram K G",
   title: "Full-Stack Software Engineer & Systems Tech Enthusiast",
   headline: "Building scalable web platforms, high-performance media servers, and intuitive user experiences.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/218598713?v=4",
+  avatarUrl: "/profile.jpg",
   location: "India",
   email: "sharwinsriram@gmail.com",
   github: "https://github.com/Sharwin-sriram",
