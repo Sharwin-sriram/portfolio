@@ -11,6 +11,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  colorScheme: "dark",
+  themeColor: "#080c14",
+};
+
 export const metadata = {
   title: "Sharwin Sriram | Full-Stack & Systems Software Engineer",
   description: "Developer portfolio of Sharwin Sriram K G - Full-Stack Software Engineer skilled in React, Next.js, TypeScript, Node.js, Java, and Low-Level System Design.",
@@ -41,8 +46,13 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      style={{ colorScheme: "dark" }}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#080c14] text-slate-100">
+      <body
+        className="min-h-full flex flex-col bg-[#080c14] text-slate-100"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

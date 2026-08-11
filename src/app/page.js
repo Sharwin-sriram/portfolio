@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -14,6 +14,15 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="min-h-screen bg-[#080c14]" />;
+  }
 
   return (
     <div className="min-h-screen bg-[#080c14] text-slate-100 selection:bg-teal-500/30 selection:text-teal-200">
