@@ -71,7 +71,7 @@ export default function Certifications() {
                 rel="noopener noreferrer"
                 className="w-full py-2.5 rounded-xl glass-panel text-slate-200 hover:text-teal-300 font-semibold text-xs border border-slate-700 hover:border-teal-500/40 transition-all flex items-center justify-center gap-2"
               >
-                <span>View NPTEL Portal</span>
+                <span>View Certificate</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
 
